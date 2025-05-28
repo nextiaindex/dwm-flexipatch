@@ -102,7 +102,7 @@ static const char buttonbar[]            = "<O>";
 #endif // BAR_STATUSBUTTON_PATCH
 #if BAR_SYSTRAY_PATCH
 static const unsigned int systrayspacing = 10;   /* systray spacing */
-static const unsigned int systrayiconsize = 16;  /* sets icon size explicitly if > 0, defaults to height of primary font */
+static const unsigned int systrayiconsize = 15;  /* sets icon size explicitly if > 0, defaults to height of primary font */
 static const int showsystray             = 1;   /* 0 means no systray */
 #endif // BAR_SYSTRAY_PATCH
 #if BAR_TAGLABELS_PATCH
@@ -885,9 +885,9 @@ static const char *roficmd[] = { "rofi", "-show", "drun", NULL};
 static const char *rofiemojicmd[] = { "rofi", "-show", "emoji", NULL};
 static const char *termcmd[]  = { "st", NULL };
 
-static const char *screenshotplaincmd[] = {"/bin/sh", "-c", "/home/nextia/.local/bin/screenshot-plain", NULL};
-static const char *screenshotfancycmd[] = {"/bin/sh", "-c", "/home/nextia/.local/bin/screenshot-fancy", NULL};
-static const char *screenshotfullcmd[] = {"/bin/sh", "-c", "/home/nextia/.local/bin/screenshot-full", NULL};
+static const char *screenshotplaincmd[] = {"/bin/sh", "-c", "/home/nextia/.local/bin/maim-plain", NULL};
+static const char *screenshotfancycmd[] = {"/bin/sh", "-c", "/home/nextia/.local/bin/maim-fancy", NULL};
+static const char *screenshotfullcmd[] = {"/bin/sh", "-c", "/home/nextia/.local/bin/maim-full", NULL};
 static const char *brightnessup[] = {"brightnessctl", "set", "+5%", NULL};
 static const char *brightnessdown[] = {"brightnessctl", "set", "5%-", NULL};
 static const char *volumeup[] = {"pactl", "set-sink-volume", "0", "+1%", NULL};
