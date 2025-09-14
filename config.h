@@ -885,14 +885,6 @@ static const char *roficmd[] = { "rofi", "-show", "drun", NULL};
 static const char *rofiemojicmd[] = { "rofi", "-show", "emoji", NULL};
 static const char *termcmd[]  = { "st", NULL };
 
-static const char *screenshotplaincmd[] = {"/bin/sh", "-c", "/home/nextia/.local/bin/maim-plain", NULL};
-static const char *screenshotfancycmd[] = {"/bin/sh", "-c", "/home/nextia/.local/bin/maim-fancy", NULL};
-static const char *screenshotfullcmd[] = {"/bin/sh", "-c", "/home/nextia/.local/bin/maim-full", NULL};
-static const char *brightnessup[] = {"brightnessctl", "set", "+5%", NULL};
-static const char *brightnessdown[] = {"brightnessctl", "set", "5%-", NULL};
-static const char *volumeup[] = {"pactl", "set-sink-volume", "0", "+1%", NULL};
-static const char *volumedown[] = {"pactl", "set-sink-volume", "0", "-1%", NULL};
-static const char *volumemute[] = {"pactl", "set-sink-mute", "0", "toggle", NULL};
 #include <X11/XF86keysym.h>
 
 
@@ -1429,18 +1421,15 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                                  6)
 	TAGKEYS(                        XK_8,                                  7)
 	TAGKEYS(                        XK_9,                                  8)
-	{ 0, XK_Print, spawn, {.v = screenshotplaincmd } },
-	{ Mod1Mask, XK_Print, spawn, {.v = screenshotfancycmd } },
-	{ ControlMask, XK_Print, spawn, {.v = screenshotfullcmd } },
-	{ MODKEY, XK_e, spawn, {.v = rofiemojicmd } },
-
-	{ 0, XF86XK_MonBrightnessUp, spawn, {.v = brightnessup } },
-	{ 0, XF86XK_MonBrightnessDown, spawn, {.v = brightnessdown } },
-
-	{ 0, XF86XK_AudioRaiseVolume, spawn, {.v = volumeup } },
-	{ 0, XF86XK_AudioLowerVolume, spawn, {.v = volumedown } },
-	{ 0, XF86XK_AudioMute, spawn, {.v = volumemute } },
-
+	{ 0, 				XK_Print, spawn,			SHCMD("~/.local/bin/maim-plain") },
+	{ MODKEY, 			XK_Print, spawn,			SHCMD("~/.local/bin/maim-fancy") },
+	{ ControlMask, 			XK_Print, spawn,			SHCMD("~/.local/bin/maim-full") },
+	{ 0,				XF86XK_MonBrightnessUp,	spawn,		SHCMD("brightnessctl set +5%; pkill -RTMIN+11 dwmblocks") },
+	{ 0,				XF86XK_MonBrightnessDown, spawn,	SHCMD("brightnessctl set 5%-; pkill -RTMIN+11 dwmblocks") },
+	{ 0,				XF86XK_AudioRaiseVolume, spawn,		SHCMD("pactl set-sink-volume 0 +1%; pkill -RTMIN+10 dwmblocks") },
+	{ 0,				XF86XK_AudioLowerVolume, spawn,		SHCMD("pactl set-sink-volume 0 -1%; pkill -RTMIN+10 dwmblocks") },
+	{ 0,				XF86XK_AudioMute, spawn,		SHCMD("pactl set-sink-mute 0 toggle; pkill -RTMIN+10 dwmblocks") },
+	{ MODKEY, XK_e, spawn, {.v = rofiemojicmd} }.
 };
 
 #if KEYMODES_PATCH
