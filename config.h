@@ -169,7 +169,7 @@ static const char font[]                 = "monospace 10";
 #else
 static const char *fonts[]               = { "Space Mono:size=11" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "monospace:size=10";
+static const char dmenufont[]            = "Space Mono:size=11";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
