@@ -1429,7 +1429,7 @@ static const Key keys[] = {
 	{ 0,				XF86XK_AudioRaiseVolume, spawn,		SHCMD("pactl set-sink-volume 0 +1%; pkill -RTMIN+10 dwmblocks") },
 	{ 0,				XF86XK_AudioLowerVolume, spawn,		SHCMD("pactl set-sink-volume 0 -1%; pkill -RTMIN+10 dwmblocks") },
 	{ 0,				XF86XK_AudioMute, spawn,		SHCMD("pactl set-sink-mute 0 toggle; pkill -RTMIN+10 dwmblocks") },
-	{ MODKEY, XK_e, spawn, {.v = rofiemojicmd} }.
+	{ MODKEY, XK_e, spawn, {.v = rofiemojicmd} },
 };
 
 #if KEYMODES_PATCH
