@@ -173,33 +173,33 @@ static const char dmenufont[]            = "Space Mono:size=11";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
-static char normfgcolor[]                = "#cccac2";
-static char normbgcolor[]                = "#1f2430";
-static char normbordercolor[]            = "#1f2430";
-static char normfloatcolor[]             = "#f28779";
+static char normfgcolor[]                = "#cdcdcd";
+static char normbgcolor[]                = "#141415";
+static char normbordercolor[]            = "#141415";
+static char normfloatcolor[]             = "#aeaed1";
 
-static char selfgcolor[]                 = "#cccac2";
-static char selbgcolor[]                 = "#333c50";
-static char selbordercolor[]             = "#f28779";
-static char selfloatcolor[]              = "#f28779";
+static char selfgcolor[]                 = "#cdcdcd";
+static char selbgcolor[]                 = "#252530";
+static char selbordercolor[]             = "#aeaed1";
+static char selfloatcolor[]              = "#aeaed1";
 
-static char titlenormfgcolor[]           = "#cccac2";
-static char titlenormbgcolor[]           = "#333c50";
-static char titlenormbordercolor[]       = "#333c50";
+static char titlenormfgcolor[]           = "#cdcdcd";
+static char titlenormbgcolor[]           = "#252530";
+static char titlenormbordercolor[]       = "#252530";
 static char titlenormfloatcolor[]        = "#db8fd9";
 
-static char titleselfgcolor[]            = "#cccac2";
-static char titleselbgcolor[]            = "#333c50";
+static char titleselfgcolor[]            = "#cdcdcd";
+static char titleselbgcolor[]            = "#252530";
 static char titleselbordercolor[]        = "#005577";
 static char titleselfloatcolor[]         = "#005577";
 
-static char tagsnormfgcolor[]            = "#cccac2";
-static char tagsnormbgcolor[]            = "#1f2430";
+static char tagsnormfgcolor[]            = "#cdcdcd";
+static char tagsnormbgcolor[]            = "#141415";
 static char tagsnormbordercolor[]        = "#686868";
 static char tagsnormfloatcolor[]         = "#db8fd9";
 
-static char tagsselfgcolor[]             = "#f28779";
-static char tagsselbgcolor[]             = "#333c50";
+static char tagsselfgcolor[]             = "#aeaed1";
+static char tagsselbgcolor[]             = "#252530";
 static char tagsselbordercolor[]         = "#005577";
 static char tagsselfloatcolor[]          = "#005577";
 
@@ -208,9 +208,9 @@ static char hidselfgcolor[]              = "#227799";
 static char hidnormbgcolor[]             = "#222222";
 static char hidselbgcolor[]              = "#222222";
 
-static char urgfgcolor[]                 = "#1f2430";
-static char urgbgcolor[]                 = "#ffd173";
-static char urgbordercolor[]             = "#1f2430";
+static char urgfgcolor[]                 = "#141415";
+static char urgbgcolor[]                 = "#f3be7c";
+static char urgbordercolor[]             = "#141415";
 static char urgfloatcolor[]              = "#db8fd9";
 
 #if RENAMED_SCRATCHPADS_PATCH
