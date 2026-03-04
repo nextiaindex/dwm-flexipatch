@@ -37,6 +37,7 @@ draw_systray(Bar *bar, BarArg *a)
 		wa.event_mask = ButtonPressMask|ExposureMask;
 		wa.border_pixel = 0;
 		systray->h = MIN(a->h, drw->fonts->h);
+		systray->h = (systrayiconsize > 0 ? systrayiconsize : MIN(a->h, drw->fonts->h));
 		#if BAR_ALPHA_PATCH
 		wa.background_pixel = 0;
 		wa.colormap = cmap;
